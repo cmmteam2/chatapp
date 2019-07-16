@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :helloworldposts
+  
   
   get "/login" , to:"session#login"
   post '/login',   to: 'session#create'
