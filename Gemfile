@@ -8,7 +8,8 @@ gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
 gem 'bcrypt',         '3.1.12'
 
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+#gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -49,6 +50,11 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+
+group :production do
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'pg'
+end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
